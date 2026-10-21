@@ -26,13 +26,7 @@ Secrets come from environment variables, stay out of the repository, and are doc
 
 ## Glossary
 
-- **Run**: one execution of one architecture against one query, with its plan, steps, sources, and report.
-- **Architecture**: one of the two structurally different agent designs that can carry out a run.
-- **Plan**: the research approach the agent works out from the query before gathering; it can be revised mid-run (a re-plan).
-- **Step**: one recorded unit of work in a run: planning, a search or other tool call, a re-plan, or synthesis.
-- **Source**: a web result found during a run that the report can cite.
-- **Report**: the final structured research output of a run, with citations to its sources.
-- **Comparison**: the same query run on both architectures, plus a stored judgment of which produced the better research.
+Domain terms (Run, Architecture, Plan, Step, Source, Report, Comparison) are defined in [GLOSSARY.md](GLOSSARY.md).
 
 ## Core behaviour
 
@@ -125,3 +119,15 @@ These are open. Settle each one before building the part it affects, and record 
 6. **Models**: which OpenRouter models the agents and the judge use. Free (`:free`) models have per-minute and per-day request caps, which limit how many LLM calls a run can make.
 7. **API shape**: exact routes, request/response payloads, and the report format (sections, citation style).
 8. **Schema**: tables and relationships for runs, plans, steps, sources, reports, and comparisons.
+
+## Definition of done
+
+A PR, and the project as a whole, is done only when the developer can explain what was built **without notes**, especially the request flow and the Logfire traces. Working code that the developer cannot explain does not count as done, and neither does broken or partial understanding.
+
+Getting there works like tuition, not an exam:
+
+1. **Explain.** The developer is taught each item first, in plain words, against the actual code and the actual Logfire trace.
+2. **Quiz.** Then the developer is quizzed on what was just taught, interview-style.
+3. **Re-explain.** Anything answered shakily is explained again and quizzed again.
+
+Each PR's spec under `.scratch/` lists what the developer must be able to explain for that PR.
