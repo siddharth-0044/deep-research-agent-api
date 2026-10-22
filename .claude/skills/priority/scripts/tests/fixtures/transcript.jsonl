@@ -1,0 +1,20 @@
+{"type": "user", "origin": {"kind": "human"}, "turnPosition": {"promptIndex": 1, "turnIndex": 1}, "cwd": "/tmp/demo-project", "message": {"role": "user", "content": "Set up the project please"}}
+{"type": "assistant", "message": {"role": "assistant", "content": [{"type": "thinking", "thinking": "plan it"}]}}
+{"type": "assistant", "message": {"role": "assistant", "content": [{"type": "text", "text": "Setting up. Run `! uv sync` first."}]}}
+{"type": "assistant", "message": {"role": "assistant", "content": [{"type": "tool_use", "id": "t1", "name": "Bash", "input": {"command": "ls"}}]}}
+{"type": "user", "message": {"role": "user", "content": [{"type": "tool_result", "tool_use_id": "t1", "content": "ok"}]}}
+{"type": "assistant", "message": {"role": "assistant", "content": [{"type": "text", "text": "## Done\nNext, type `/mattpocock-skills:to-tickets` yourself.\nRun `cd ~/demo && claude` in a new terminal.\n```\n! podman ps\n```"}]}}
+{"type": "system", "subtype": "stop_hook_summary"}
+{"type": "system", "subtype": "turn_duration"}
+this line is not json
+{"type": "user", "isMeta": true, "origin": {"kind": "peer"}, "turnPosition": {"promptIndex": 1, "turnIndex": 2}, "message": {"role": "user", "content": "Another Claude session sent a message: report"}}
+{"type": "user", "isMeta": true, "message": {"role": "user", "content": [{"type": "text", "text": "Base directory for this skill: /x"}]}}
+{"type": "assistant", "isSidechain": true, "message": {"role": "assistant", "content": [{"type": "text", "text": "SIDECHAIN TEXT"}]}}
+{"type": "assistant", "message": {"role": "assistant", "content": [{"type": "text", "text": "Got the report.\n\n❓ **Q2 - Pick a name**: Shall we call it demo?\n\n➡️ Yes, demo."}]}}
+{"type": "system", "subtype": "turn_duration"}
+{"type": "user", "origin": {"kind": "task-notification"}, "message": {"role": "user", "content": "<task-notification><summary>Agent finished</summary></task-notification>"}}
+{"type": "system", "subtype": "turn_duration"}
+{"type": "user", "message": {"role": "user", "content": "<command-name>/effort</command-name>"}}
+{"type": "user", "origin": {"kind": "human"}, "turnPosition": {"promptIndex": 3, "turnIndex": 4}, "message": {"role": "user", "content": "<command-message>priority</command-message>\n<command-name>/priority</command-name>\n<command-args>2</command-args>"}}
+{"type": "user", "isMeta": true, "message": {"role": "user", "content": [{"type": "text", "text": "Base directory for this skill: /priority"}]}}
+{"type": "assistant", "message": {"role": "assistant", "content": [{"type": "text", "text": "Collecting outputs now."}]}}
